@@ -1,0 +1,7 @@
+FROM opendemo.sakuracr.jp/y-egusa/sd15-base
+
+ADD lora_config.toml.tmpl /opt/lora_config.toml.tmpl
+ADD entrypoint_15.sh /opt/entrypoint.sh
+ENTRYPOINT ["/opt/entrypoint.sh"]
+
+
