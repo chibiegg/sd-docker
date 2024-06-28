@@ -1,7 +1,7 @@
 FROM opendemo.sakuracr.jp/y-egusa/sdxl-base
 
 ADD lora_config.toml.tmpl /opt/lora_config.toml.tmpl
-ADD entrypoint.sh /opt/entrypoint.sh
+ADD entrypoint_sdxl.sh /opt/entrypoint.sh
 ENTRYPOINT ["/opt/entrypoint.sh"]
 
 
