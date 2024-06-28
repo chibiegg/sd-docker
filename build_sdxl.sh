@@ -2,5 +2,5 @@
 
 IMAGE=opendemo.sakuracr.jp/y-egusa/sdxl:latest
 
-docker build -t ${IMAGE} -f Docker.sdxl .
+docker build -t ${IMAGE} -f Dockerfile.sdxl .
 docker push ${IMAGE}
