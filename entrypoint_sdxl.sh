@@ -37,6 +37,7 @@ function gen_image () {
 
 	python3 sdxl_gen_img.py \
 		--ckpt ${MODEL_FILE} \
+		--vae /sd-models/sdxl_vae.safetensors \
 		--images_per_prompt ${NUM_IMAGES} ${EXTRA_ARGS} \
 		--sampler ${SAMPLER} --steps ${STEPS} --batch_size ${BATCH_SIZE} \
 		--outdir ${SAKURA_ARTIFACT_DIR} --xformers --fp16 --prompt "${PROMPT}"
