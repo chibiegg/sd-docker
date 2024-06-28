@@ -77,6 +77,6 @@ TASK=$1
 
 case "${TASK}" in
 	"generate" ) gen_image "$2" "$3" ;;
-	"lerning" ) gen_lora "$2" "$3" "$4" ;;
+	"learning" ) gen_lora "$2" "$3" "$4" ;;
 	"study" ) gen_lora "$2" "$3" "$4" ;;
 esac
