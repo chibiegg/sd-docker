@@ -21,6 +21,7 @@ function gen_image () {
 	if [ -z "${STEPS}" ]; then
 		STEPS=50
 	fi
+
 	EXTRA_ARGS=""
 	if [ -n "${LORA_URL}" ]; then
 		LORA_FILENAME=`basename "${LORA_URL}"`
@@ -30,6 +31,10 @@ function gen_image () {
 	if [ -n "${SEED}" ]; then
 		EXTRA_ARGS=" --seed ${SEED}"
 	fi
+	if [ -n "${BATCH_SIZE}" ]; then
+		EXTRA_ARGS=" --batch_size ${BATCH_SIZE}"
+	fi
+
 	python3 gen_img.py \
 		--ckpt ${MODEL_FILE} \
 		--images_per_prompt ${NUM_IMAGES} ${EXTRA_ARGS} \
